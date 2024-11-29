@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TeleVue</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Add FontAwesome CDN for stars -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="sub.css">
+
+  
+</head>
+<style>
+    .hero {
+            width: 100%;
+            min-height: 50vh;
+            position: relative;
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+</style>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">TeleVue</h1><span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu" style="margin-right: 9px;">
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="destination.html" class="active">DestinationPage</a></li>
+          <li><a href="about.html">AboutUs</a></li>
+          <li><a href="contact.html">ContactUs</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">Faq</a></li>
+          <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+          <li><a href="dashboard.html"><i class="fa fa-user"></i></a></li> 
+           
+      </ul>
+      
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="tv-bannersss.jpg" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <h2 data-aos="fade-up" data-aos-delay="100">"Discover the latest in TV technology with unbeatable deals"</h2>
+        </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+
+
+  </main>
+
+
+  <div class="container mx-auto p-4">
+    <div class="flex">
+        <!-- Product Image Carousel -->
+        <div class="w-1/2">
+            <img id="mainImage" src="d45.jpg" class="w-full" alt="LG OLED 8K TV" data-aos="fade-up" />
+        </div>
+
+        <!-- Product Details -->
+        <div class="w-1/2 pl-4">
+            <h1 class="text-2xl font-bold" id="productTitle" style="color: #e84545;">TCL Dolby Vision </h1>
+            <div class="flex items-center mt-2 text-yellow-500">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span class="ml-2 text-gray-600">(15 Ratings & 4 Reviews)</span>
+            </div>
+            <div class="mt-4 text-xl font-bold text-green-600" id="productPrice">Offer Price: ₹1,74,999.00</div>
+            <p class="text-gray-600">MRP: <span class="line-through" id="productOriginalPrice">₹3,79,999.00</span> (Inclusive of all taxes)</p>
+            <p class="text-green-600">You Save: 21% (₹80,000)</p>
+            <p class="text-green-600 font-bold">FREE Shipping!</p>
+
+            <!-- Key Features -->
+            <div class="mt-4">
+                <h3 class="text-lg font-bold" style="color: #e84545;">Key Features</h3>
+                <ul class="list-disc list-inside">
+                    <li>1-year Warranty on panel by manufacturer</li>
+                    <li>Supported Apps: YouTube, Netflix, Prime Video, Disney+ Hotstar, Apple TV+</li>
+                    <li>Operating System: webOS with ThinQ AI</li>
+                    <li>Connectivity: HDMI 2.1, USB, Wi-Fi, Bluetooth 5.0</li>
+                    <li>TCL Dolby Vision Display for Ultra-Realistic Picture Quality</li>
+                    <li>Ultra Slim & Modern Design with Minimal Bezel</li>
+                    <li>AI-Powered Voice Control via Google Assistant and Alexa</li>
+                    <li>Dolby Vision IQ & Dolby Atmos for Immersive Sound</li>
+                    <li>Energy Efficient with Low Power Consumption</li>
+                </ul>
+            </div>
+
+            <!-- Buttons for Cart and Buy -->
+            <div class="mt-4 flex space-x-4">
+                <button onclick="addToCart()" class="custom-button">
+                    Add to Cart
+                    <svg class="icon-cart" viewBox="0 0 576 512">
+                        <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
+                    </svg>
+                </button>
+                <button onclick="buyNow()" class="buy-now-button">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Specifications Table -->
+    <div class="mt-8">
+        <h2 class="text-xl font-bold" style="color: #e84545;">Product Specifications</h2>
+        <table class="table-auto w-full mt-4 border bg-white shadow rounded">
+            <tbody>
+                <tr class="border-b">
+                    <td class="px-4 py-2 font-semibold">Screen Size</td>
+                    <td class="px-4 py-2">1.95 m (77 inches)</td>
+                </tr>
+                <tr class="border-b">
+                    <td class="px-4 py-2 font-semibold">Resolution</td>
+                    <td class="px-4 py-2">7680 x 4320 (8K UHD)</td>
+                </tr>
+                <tr class="border-b">
+                    <td class="px-4 py-2 font-semibold">Display Technology</td>
+                    <td class="px-4 py-2">TCL Dolby Vision with HDR</td>
+                </tr>
+                <tr class="border-b">
+                    <td class="px-4 py-2 font-semibold">Operating System</td>
+                    <td class="px-4 py-2">webOS with ThinQ AI</td>
+                </tr>
+                <tr class="border-b">
+                    <td class="px-4 py-2 font-semibold">Connectivity</td>
+                    <td class="px-4 py-2">Wi-Fi, HDMI 2.1, USB, Bluetooth 5.0</td>
+                </tr>
+                <tr class="border-b">
+                    <td class="px-4 py-2 font-semibold">Audio Output</td>
+                    <td class="px-4 py-2">60W Speaker Output with Dolby Atmos</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Product Description Section -->
+    <div class="mt-8">
+        <h2 class="text-xl font-bold" style="color: #e84545;">Detailed Description</h2>
+        <p class="mt-2 text-gray-700">
+            The TCL Dolby Vision features an exceptional 8K resolution display, bringing unparalleled picture clarity and depth. The TV uses TCL Dolby Vision technology with Dolby Vision IQ and HDR10+ to deliver breathtaking color accuracy and contrast. It comes with webOS and ThinQ AI, offering a seamless and intuitive user experience. You can easily access popular streaming apps like YouTube, Netflix, Prime Video, and more.
+        </p>
+    </div>
+
+     <!-- Customer Reviews Section -->
+<div class="mt-8">
+    <h2 class="text-xl font-bold" style="color: #e84545;">Customer Reviews</h2>
+
+    <!-- Review 1 -->
+    <div class="mt-4">
+        <div class="flex items-center">
+            <!-- Rating Stars -->
+            <div class="text-yellow-500">
+                <!-- Full stars -->
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <!-- Half star -->
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="ml-2 text-gray-600">- John Doe</span>
+        </div>
+        <p class="mt-2 text-gray-700">
+            "This TV is absolutely stunning! The 8K resolution is mind-blowing, and the Dolby Atmos sound makes it feel like you're in a cinema. Highly recommend!"
+        </p>
+    </div>
+
+    <!-- Review 2 -->
+    <div class="mt-4">
+        <div class="flex items-center">
+            <!-- Rating Stars -->
+            <div class="text-yellow-500">
+                <!-- Full stars -->
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <span class="ml-2 text-gray-600">- Emma Roberts</span>
+        </div>
+        <p class="mt-2 text-gray-700">
+            "A game-changer for my living room! The picture quality is beyond anything I've seen before. The smart features are intuitive, and setting it up was a breeze."
+        </p>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="mt-4">
+        <div class="flex items-center">
+            <!-- Rating Stars -->
+            <div class="text-yellow-500">
+                <!-- Full stars -->
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <!-- Half star -->
+                <i class="fas fa-star-half-alt"></i>
+                <!-- Empty star -->
+                <i class="far fa-star"></i>
+            </div>
+            <span class="ml-2 text-gray-600">- Michael Lee</span>
+        </div>
+        <p class="mt-2 text-gray-700">
+            "Great TV overall, but the setup was a bit complicated initially. Once everything was set up, the experience was fantastic. The 8K clarity is incredible!"
+        </p>
+    </div>
+</div>
+
+</div>
+
+<script>
+    // Function to store product details in sessionStorage (for "Buy Now" functionality)
+    function storeProductDetailsForCheckout() {
+        const productDetails = {
+            title: document.getElementById('productTitle').innerText,
+            price: document.getElementById('productPrice').innerText,
+            image: document.getElementById('mainImage').src
+        };
+
+        // Store product details in sessionStorage
+        sessionStorage.setItem('productDetails', JSON.stringify(productDetails));
+    }
+
+    // Add to Cart function (to be called on Add to Cart button click)
+    function addToCart() {
+        const productDetails = {
+            title: document.getElementById('productTitle').innerText,
+            price: document.getElementById('productPrice').innerText,
+            image: document.getElementById('mainImage').src
+        };
+
+        // Retrieve existing cart items from localStorage
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        // Add the new product to the cart array
+        cartItems.push(productDetails);
+
+        // Save the updated cart array back to localStorage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        alert("Product added to cart!");  // For feedback
+    }
+
+    // Buy Now function
+    function buyNow() {
+        storeProductDetailsForCheckout();  // Store product details in sessionStorage
+        window.location.href = "checkout1.html"; // Redirect to checkout page
+    }
+
+    // Initialize AOS (Animation library)
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+    });
+</script>
+
+
+
+
+  
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">TeleVue</span>
+          </a>
+          <p>Discover the latest TVs with stunning picture quality, smart features, and unbeatable sound. Find the perfect model to enhance your viewing experience today!</p>
+
+          <div class="social-links d-flex mt-4">
+            <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/login.php/"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/your-channel-id" target="_blank"><i class="bi bi-youtube"></i></a>
+
+
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="destination.html">DestinationPage</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Information</h4>
+          <ul>
+              <li><a href="term.html">Terms & Conditions</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="return.html">Return Policy</a></li>
+              <li><a href="shipping.html">Shipping Information</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+          </ul>
+      </div>
+      
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>White Field No-3</p>
+          <p>Bangalore,535022</p>
+          <p>INDIA</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 9876543210</span></p>
+          <p><strong>Email:</strong> <span>info@telenue.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
