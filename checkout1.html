@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Checkout Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Add FontAwesome CDN for stars -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+   
+
+  
+</head>
+<style>
+    .hero {
+            width: 100%;
+            min-height: 50vh;
+            position: relative;
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .error {
+        color: red;
+        font-size: 0.875rem;
+    }
+    .input-error {
+        border: 2px solid red;
+    }
+</style>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">TeleVue</h1><span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu" style="margin-right: 9px;">
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="destination.html">DestinationPage</a></li>
+          <li><a href="about.html">AboutUs</a></li>
+          <li><a href="contact.html">ContactUs</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">Faq</a></li>
+          <li><a href="cart.html" class="active"><i class="fa fa-shopping-cart"></i></a></li>
+          <li><a href="dashboard.html"><i class="fa fa-user"></i></a></li> 
+           
+      </ul>
+      
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="tv-bannersss.jpg" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to the TeleNue!</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Discover a wide range of top-quality televisions with the latest technology, from 4K Ultra HD to Smart TVs. Find the perfect model for your home today!</p>
+        </div>
+        
+          <!-- <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="sign-up-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            </form>
+          </div> -->
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+
+
+  </main>
+
+
+
+  <div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-6">Checkout</h1>
+
+    <!-- Checkout Items Section -->
+    <div id="checkoutItemsContainer">
+        <!-- Checkout items will be dynamically added here -->
+    </div>
+
+    <!-- User Details Section -->
+    <div class="mt-6">
+        <h2 class="text-2xl font-semibold mb-4">User Details</h2>
+        <form id="userDetailsForm" class="space-y-4">
+            <div>
+                <label for="fullName" class="block text-sm font-medium">Full Name</label>
+                <input type="text" id="fullName" name="fullName" class="w-full p-2 border border-gray-300 rounded-md" required placeholder="Enter your full name" oninput="validateFullName()">
+                <div id="fullNameError" class="error"></div>
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium">Email</label>
+                <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-md" required placeholder="Enter your email address" oninput="validateEmail()">
+                <div id="emailError" class="error"></div>
+            </div>
+            <div>
+                <label for="address" class="block text-sm font-medium">Address</label>
+                <textarea id="address" name="address" class="w-full p-2 border border-gray-300 rounded-md" required placeholder="Enter your shipping address"></textarea>
+            </div>
+            <div>
+                <label for="phone" class="block text-sm font-medium">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="w-full p-2 border border-gray-300 rounded-md" required placeholder="Enter your phone number" maxlength="10" oninput="validatePhoneNumber()">
+                <div id="phoneError" class="error"></div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Payment Details Section -->
+    <div class="mt-6">
+        <h2 class="text-2xl font-semibold mb-4">Payment Details</h2>
+        <form id="paymentDetailsForm" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium">Payment Method</label>
+                <div>
+                    <input type="radio" id="cardPayment" name="paymentMethod" value="card" onclick="togglePaymentFields()" checked>
+                    <label for="cardPayment">Card</label>
+                    <input type="radio" id="upiPayment" name="paymentMethod" value="upi" onclick="togglePaymentFields()">
+                    <label for="upiPayment">UPI</label>
+                    <input type="radio" id="codPayment" name="paymentMethod" value="cod" onclick="togglePaymentFields()">
+                    <label for="codPayment">Cash on Delivery</label>
+                </div>
+            </div>
+
+            <!-- Card Payment Details -->
+            <div id="cardDetails" class="space-y-4">
+                <div>
+                    <label for="cardNumber" class="block text-sm font-medium">Card Number</label>
+                    <input type="text" id="cardNumber" name="cardNumber" class="w-full p-2 border border-gray-300 rounded-md" required placeholder="Enter your card number" maxlength="16" oninput="validateCardNumber()">
+                    <div id="cardNumberError" class="error"></div>
+                </div>
+                <div class="flex space-x-4">
+                    <div class="w-1/2">
+                        <label for="expiryDate" class="block text-sm font-medium">Expiry Date</label>
+                        <input type="month" id="expiryDate" name="expiryDate" class="w-full p-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div class="w-1/2">
+                        <label for="cvv" class="block text-sm font-medium">CVV</label>
+                        <input type="text" id="cvv" name="cvv" class="w-full p-2 border border-gray-300 rounded-md" required maxlength="3" placeholder="Enter CVV" oninput="validateCVV()">
+                        <div id="cvvError" class="error"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UPI Payment Details -->
+            <div id="upiDetails" class="space-y-4 hidden">
+                <div>
+                    <label for="upiId" class="block text-sm font-medium">UPI ID</label>
+                    <input type="text" id="upiId" name="upiId" class="w-full p-2 border border-gray-300 rounded-md" required placeholder="Enter your UPI ID" oninput="validateUPI()">
+                    <div id="upiError" class="error"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Total and Place Order Button -->
+    <div class="mt-4 text-right">
+        <p class="text-xl font-bold">Total: ₹<span id="totalPrice">0.00</span></p>
+        <button onclick="placeOrder()" id="placeOrderButton" class="bg-green-500 text-white py-2 px-4 rounded-lg mt-4 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400">
+            Place Order
+        </button>
+    </div>
+</div>
+
+<script>
+    // Function to load checkout items from sessionStorage
+    function loadCheckoutItems() {
+        const productDetails = JSON.parse(sessionStorage.getItem('productDetails')) || {};
+        const checkoutItemsContainer = document.getElementById('checkoutItemsContainer');
+        const totalPriceElement = document.getElementById('totalPrice');
+        const placeOrderButton = document.getElementById('placeOrderButton');
+
+        checkoutItemsContainer.innerHTML = ''; // Clear any existing items
+
+        if (productDetails) {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = "flex items-center justify-between py-2 border-b";
+
+            const itemInfo = document.createElement('div');
+            itemInfo.className = "flex items-center space-x-4";
+            itemInfo.innerHTML = `<img src="${productDetails.image}" alt="${productDetails.title}" class="w-16 h-16 object-cover">
+                                  <div>
+                                      <h3 class="font-semibold">${productDetails.title}</h3>
+                                      <p>${productDetails.price}</p>
+                                  </div>`;
+
+            itemDiv.appendChild(itemInfo);
+            checkoutItemsContainer.appendChild(itemDiv);
+
+            // Update total price
+            totalPriceElement.innerText = productDetails.price.replace(/[^\d.-]/g, '');
+        }
+
+        // Disable the "Place Order" button if no product details are available
+        if (!productDetails || !productDetails.title) {
+            placeOrderButton.disabled = true;
+        }
+    }
+
+    // Function to toggle payment fields based on selected payment method
+    function togglePaymentFields() {
+        const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+        // Hide all payment fields initially
+        document.getElementById('cardDetails').classList.add('hidden');
+        document.getElementById('upiDetails').classList.add('hidden');
+
+        // Show relevant payment method fields
+        if (paymentMethod === 'card') {
+            document.getElementById('cardDetails').classList.remove('hidden');
+        } else if (paymentMethod === 'upi') {
+            document.getElementById('upiDetails').classList.remove('hidden');
+        }
+    }
+
+    // Function to validate Full Name (only alphabet and spaces)
+    function validateFullName() {
+        const fullNameInput = document.getElementById('fullName');
+        const fullNameValue = fullNameInput.value;
+        const fullNamePattern = /^[A-Za-z\s]+$/;
+
+        if (!fullNamePattern.test(fullNameValue) || fullNameValue.trim() === '') {
+            document.getElementById('fullNameError').innerText = "Full Name must only contain letters and spaces.";
+            fullNameInput.classList.add('input-error');
+        } else {
+            document.getElementById('fullNameError').innerText = '';
+            fullNameInput.classList.remove('input-error');
+        }
+    }
+
+    // Function to validate Email (must be a valid email format)
+    function validateEmail() {
+        const emailInput = document.getElementById('email');
+        const emailValue = emailInput.value;
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+        if (!emailPattern.test(emailValue) || emailValue.trim() === '') {
+            document.getElementById('emailError').innerText = "Please enter a valid email address.";
+            emailInput.classList.add('input-error');
+        } else {
+            document.getElementById('emailError').innerText = '';
+            emailInput.classList.remove('input-error');
+        }
+    }
+
+    // Function to validate phone number (must be 10 digits)
+    function validatePhoneNumber() {
+        const phoneInput = document.getElementById('phone');
+        const phoneValue = phoneInput.value;
+
+        if (phoneValue.length > 10) {
+            phoneInput.value = phoneValue.slice(0, 10); // Limit input to 10 digits
+        }
+
+        if (phoneValue.length !== 10) {
+            document.getElementById('phoneError').innerText = "Phone number must be 10 digits.";
+            phoneInput.classList.add('input-error');
+        } else {
+            document.getElementById('phoneError').innerText = '';
+            phoneInput.classList.remove('input-error');
+        }
+    }
+
+    // Function to validate card number (must be 16 digits)
+    function validateCardNumber() {
+        const cardInput = document.getElementById('cardNumber');
+        const cardValue = cardInput.value;
+
+        if (cardValue.length > 16) {
+            cardInput.value = cardValue.slice(0, 16); // Limit input to 16 digits
+        }
+
+        if (cardValue.length !== 16) {
+            document.getElementById('cardNumberError').innerText = "Card number must be 16 digits.";
+            cardInput.classList.add('input-error');
+        } else {
+            document.getElementById('cardNumberError').innerText = '';
+            cardInput.classList.remove('input-error');
+        }
+    }
+
+    // Function to validate CVV (must be 3 digits)
+    function validateCVV() {
+        const cvvInput = document.getElementById('cvv');
+        const cvvValue = cvvInput.value;
+
+        if (cvvValue.length > 3) {
+            cvvInput.value = cvvValue.slice(0, 3); // Limit input to 3 digits
+        }
+
+        if (cvvValue.length !== 3) {
+            document.getElementById('cvvError').innerText = "CVV must be 3 digits.";
+            cvvInput.classList.add('input-error');
+        } else {
+            document.getElementById('cvvError').innerText = '';
+            cvvInput.classList.remove('input-error');
+        }
+    }
+
+    // Function to validate UPI ID
+    function validateUPI() {
+        const upiInput = document.getElementById('upiId');
+        const upiValue = upiInput.value;
+        const upiPattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9.-]+$/;
+
+        if (!upiPattern.test(upiValue)) {
+            document.getElementById('upiError').innerText = "Please enter a valid UPI ID.";
+            upiInput.classList.add('input-error');
+        } else {
+            document.getElementById('upiError').innerText = '';
+            upiInput.classList.remove('input-error');
+        }
+    }
+
+    // Function to simulate placing an order
+    function placeOrder() {
+        const userForm = document.getElementById('userDetailsForm');
+        const paymentForm = document.getElementById('paymentDetailsForm');
+        const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+        // Validate user details and payment form
+        if (!userForm.checkValidity()) {
+            alert("Please fill in all the required user details.");
+            return;
+        }
+
+
+        if (paymentMethod === 'card') {
+            const cardNumber = document.getElementById('cardNumber').value;
+
+            if (!isValidCardNumber(cardNumber.replace(/\s/g, ''))) {
+                alert("Invalid card number.");
+                return;
+            }
+        }
+
+        alert("Order placed successfully!");
+        sessionStorage.removeItem('productDetails'); // Clear product details after order is placed
+        window.location.href = "orderconformation.html"; // Redirect to homepage or order confirmation page
+    }
+
+    // Luhn Algorithm for basic card validation
+    function isValidCardNumber(cardNumber) {
+        let sum = 0;
+        let shouldDouble = false;
+        
+        for (let i = cardNumber.length - 1; i >= 0; i--) {
+            let digit = parseInt(cardNumber[i]);
+            
+            if (shouldDouble) {
+                digit *= 2;
+                if (digit > 9) digit -= 9;
+            }
+            
+            sum += digit;
+            shouldDouble = !shouldDouble;
+        }
+        
+        return sum % 10 === 0;
+    }
+
+    // Load checkout items when the page loads
+    window.onload = loadCheckoutItems;
+</script>
+
+
+  
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">TeleVue</span>
+          </a>
+          <p>Discover the latest TVs with stunning picture quality, smart features, and unbeatable sound. Find the perfect model to enhance your viewing experience today!</p>
+
+          <div class="social-links d-flex mt-4">
+            <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/login.php/"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/your-channel-id" target="_blank"><i class="bi bi-youtube"></i></a>
+
+
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="destination.html">DestinationPage</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Information</h4>
+          <ul>
+              <li><a href="term.html">Terms & Conditions</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="return.html">Return Policy</a></li>
+              <li><a href="shipping.html">Shipping Information</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+          </ul>
+      </div>
+      
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>White Field No-3</p>
+          <p>Bangalore,535022</p>
+          <p>INDIA</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 9876543210</span></p>
+          <p><strong>Email:</strong> <span>info@televue.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TeleVue</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="blog.css" rel="stylesheet">
+
+
+</head>
+<style>
+  .hero {
+    width: 100%;
+    min-height: 50vh;
+    position: relative;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+</style>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">TeleVue</h1><span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu" style="margin-right: 9px;">
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="destination.html">DestinationPage</a></li>
+          <li><a href="about.html">AboutUs</a></li>
+          <li><a href="contact.html">ContactUs</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="faq.html">Faq</a></li>
+          <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+          <li><a href="dashboard.html"><i class="fa fa-user"></i></a></li> 
+           
+      </ul>
+      
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="tvblog.jpg" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <h2 data-aos="fade-up" data-aos-delay="100" style="text-align: center; margin-left:200px;">"Blog"</h2>
+                  </div>
+        
+          <!-- <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="sign-up-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            </form>
+          </div> -->
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+
+
+  </main>
+  <h1 style="color: #333; text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px; margin-top:50px;">Explore Our Latest Blog posts</h1>
+  <div class="container1">
+    <div class="main-grid">
+      <!-- Most Recent Posts Section -->
+      <div class="recent-posts">
+        <h2>Most Recent Posts</h2>
+        <div class="recent-post">
+          <img src="blog38.jpg" alt="Samsung News">
+          <div class="post-content">
+            <h5>News</h5>
+            <a href="blog10.html"><h4>Samsung's Latest 8K Innovations</h4></a>
+            <p>Anna Smith in News</p>
+            <p>Nov 7, 2024 · 5min read</p>
+          </div>
+        </div>
+        <div class="recent-post">
+          <img src="blog29.jpg" alt="LG OLED">
+          <div class="post-content">
+            <h5>Brands</h5>
+            <a href="blog20.html"><h4>LG OLED Updates: The Future of TV</h4></a>
+            <p>Chris Anderson in Brands</p>
+            <p>Nov 7, 2024 · 6min read</p>
+          </div>
+        </div>
+        <div class="recent-post">
+          <img src="blog3.jpg" alt="Sony Bravia">
+          <div class="post-content">
+            <h5>Television</h5>
+            <a href="blog3.html"><h4>Sony Bravia: Revolutionizing Home Entertainment</h4></a>
+            <p>Jane Doe in TVs</p>
+            <p>Nov 7, 2024 · 4min read</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Categories Section -->
+      <div class="categories">
+        <h2>Categories</h2>
+        <div class="trending-item">
+          <span class="trending-number">01</span>
+          <img src="blog40.jpg" alt="OnePlus TV">
+          <div class="trending-content">
+            <a href="blog22.html"><h4>OnePlus TV: Affordable Luxury</h4></a>
+            <p>Mark Lee in News</p>
+            <p>Nov 7, 2024 · 5min read</p>
+          </div>
+        </div>
+  
+        <div class="trending-item">
+          <span class="trending-number">02</span>
+          <img src="blog41.jpg" alt="Motorola TV">
+          <div class="trending-content">
+            <a href="blog23.html"><h4>Motorola's Entry into the Smart TV Market</h4></a>
+            <p>Lynda Brown in News</p>
+            <p>Nov 7, 2024 · 5min read</p>
+          </div>
+        </div>
+  
+        <div class="trending-item">
+          <span class="trending-number">03</span>
+          <img src="blog42.jpg" alt="Thomson TV">
+          <div class="trending-content">
+            <a href="blog24.html"><h4>Thomson TVs: A Reliable Choice for All Budgets</h4></a>
+            <p>Emma White in News</p>
+            <p>Nov 7, 2024 · 4min read</p>
+          </div>
+        </div>
+  
+        <div class="trending-item">
+          <span class="trending-number">04</span>
+          <img src="blog43.jpg" alt="Realme TV">
+          <div class="trending-content">
+            <a href="blog25.html"><h4>Realme TV: Compact and Feature-Rich</h4></a>
+            <p>Neel Patil in News</p>
+            <p>Nov 7, 2024 · 5min read</p>
+          </div>
+        </div>
+  
+        <div class="trending-item">
+          <span class="trending-number">05</span>
+          <img src="blog37.jpg" alt="TCL TV">
+          <div class="trending-content">
+            <a href="blog27.html"><h4>TCL TVs: Smart Entertainment for Everyone</h4></a>
+            <p>Kay Johnson in News</p>
+            <p>Nov 7, 2024 · 6min read</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="highlights-container">
+    <h2>Top News</h2>
+    <div class="highlights">
+        <div class="highlight-item">
+            <img src="blog38.jpg" alt="Samsung TV">
+            <div class="content">
+              <a href="blog19.html"><h3>Samsung’s Game-Changing 8K Technology</h3></a>
+                <p>Anna Smith in News</p>
+                <p>Nov 7, 2024 · 5min read</p>
+            </div>
+        </div>
+  
+        <div class="highlight-item">
+            <img src="blog39.jpg" alt="LG OLED">
+            <div class="content">
+              <a href="blog20.html"><h3>LG Unveils OLED Innovations for 2024</h3></a>
+                <p>Chris Anderson in News</p>
+                <p>Nov 7, 2024 · 6min read</p>
+            </div>
+        </div>
+  
+        <div class="highlight-item">
+            <img src="blog40.jpg" alt="Sony Bravia">
+            <div class="content">
+              <a href="blog21.html"><h3>Sony Bravia XR Series: A New Standard in TV Clarity</h3></a>
+                <p>Jane Doe in News</p>
+                <p>Nov 7, 2024 · 4min read</p>
+            </div>
+        </div>
+  
+        <div class="highlight-item">
+            <img src="blog41.jpg" alt="OnePlus TV">
+            <div class="content">
+              <a href="blog22.html"><h3>OnePlus Q2 Series: Bringing Premium Quality to More Homes</h3></a>
+                <p>Mark Lee in News</p>
+                <p>Nov 7, 2024 · 5min read</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  
+ 
+
+<!-- Tabs for Categories -->
+<div class="tabs">
+<button onclick="showCategory('television')" class="active">Televisions</button>
+<button onclick="showCategory('brands')">Brands</button>
+<button onclick="showCategory('news')">News</button>
+</div>
+
+<!-- Content for each category -->
+
+<div id="television" class="post1-grid">
+<!-- Televisions Category Content -->
+<div class="post1">
+<img src="blog1.jpg" alt="Best TVs of 2024">
+<div class="post1-content">
+  <div class="post1-category">Televisions</div>
+  <a href="blog1.html"><div class="post1-title">Samsung 4k</div></a>
+  <div class="post1-info">
+    <img src="bloguser1.jpg" alt="Author">
+    <div>
+      <div>Lisa Neymar</div>
+      <div>Nov 7, 2024</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="post1">
+<img src="blog2.jpg" alt="OLED vs. QLED">
+<div class="post1-content">
+  <div class="post1-category">Televisions</div>
+  <a href="blog2.html"><div class="post1-title">LG 4K</div></a>
+  <div class="post1-info">
+    <img src="bloguser2.jpg" alt="Author">
+    <div>
+      <div>John Doe</div>
+      <div>Nov 7, 2024</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="post1">
+  <img src="blog3.jpg" alt="OLED vs. QLED">
+  <div class="post1-content">
+    <div class="post1-category">Televisions</div>
+    <a href="blog3.html"><div class="post1-title">Sony 4K</div></a>
+    <div class="post1-info">
+      <img src="bloguser3.jpg" alt="Author">
+      <div>
+        <div>Maria</div>
+        <div>Nov 7, 2024</div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="post1">
+    <img src="blog4.jpg" alt="OLED vs. QLED">
+    <div class="post1-content">
+      <div class="post1-category">Televisions</div>
+      <a href="blog4.html"><div class="post1-title">Oneplus 4K</div></a>
+      <div class="post1-info">
+        <img src="bloguser4.jpg" alt="Author">
+        <div>
+          <div>Mark</div>
+          <div>Nov 7, 2024</div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="post1">
+      <img src="blog5.jpg" alt="OLED vs. QLED">
+      <div class="post1-content">
+        <div class="post1-category">Televisions</div>
+        <a href="blog5.html"><div class="post1-title">Motorola Full HD</div></a>
+        <div class="post1-info">
+          <img src="bloguser5.jpg" alt="Author">
+          <div>
+            <div>Allisa</div>
+            <div>Nov 7, 2024</div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="post1">
+        <img src="blog6.jpg" alt="OLED vs. QLED">
+        <div class="post1-content">
+          <div class="post1-category">Televisions</div>
+          <a href="blog6.html"><div class="post1-title">Thomoson 4K</div></a>
+          <div class="post1-info">
+            <img src="bloguser6.jpg" alt="Author">
+            <div>
+              <div>Mika</div>
+              <div>Nov 7, 2024</div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="post1">
+          <img src="blog7.jpg" alt="OLED vs. QLED">
+          <div class="post1-content">
+            <div class="post1-category">Televisions</div>
+            <a href="blog7.html"><div class="post1-title">Realme 4k</div></a>
+            <div class="post1-info">
+              <img src="bloguser7.jpg" alt="Author">
+              <div>
+                <div>Georgia</div>
+                <div>Nov 7, 2024</div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="post1">
+            <img src="blog8.jpg" alt="OLED vs. QLED">
+            <div class="post1-content">
+              <div class="post1-category">Televisions</div>
+              <a href="blog8.html"><div class="post1-title">Toshiba Full HD</div></a>
+              <div class="post1-info">
+                <img src="bloguser8.jpg" alt="Author">
+                <div>
+                  <div>Denis</div>
+                  <div>Nov 7, 2024</div>
+                </div>
+              </div>
+            </div>
+            </div>
+<div class="post1">
+<img src="blog9.jpg" alt="Budget-Friendly TVs">
+<div class="post1-content">
+  <div class="post1-category">Televisions</div>
+  <a href="blog9.html"><div class="post1-title">TCL Smart Tv</div></a>
+  <div class="post1-info">
+    <img src="bloguser9.jpg" alt="Author">
+    <div>
+      <div>Anna Smith</div>
+      <div>Nov 7, 2024</div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div id="brands" class="post1-grid" style="display: none;">
+<!-- Brands Category Content -->
+<div class="post1">
+<img src="blog28.jpg" alt="Top TV Brands">
+<div class="post1-content">
+  <div class="post1-category">Brands</div>
+  <a href="blog10.html"><div class="post1-title">Samsung</div></a>
+  <div class="post1-info">
+    <img src="bloguser10.jpg" alt="Author">
+    <div>
+      <div>Anna Smith</div>
+      <div>Nov 7, 2024</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="post1">
+<img src="blog29.jpg" alt="Sony vs Samsung">
+<div class="post1-content">
+  <div class="post1-category">Brands</div>
+  <a href="blog11.html"><div class="post1-title">LG </div></a>
+  <div class="post1-info">
+    <img src="bloguser11.jpg" alt="Author">
+    <div>
+      <div>Nolan</div>
+      <div>Nov 7, 2024</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="post1">
+  <img src="blog30.jpg" alt="Sony vs Samsung">
+  <div class="post1-content">
+    <div class="post1-category">Brands</div>
+    <a href="blog12.html"><div class="post1-title">Sony </div></a>
+    <div class="post1-info">
+      <img src="bloguser12.jpg" alt="Author">
+      <div>
+        <div>Mike Turner</div>
+        <div>Nov 7, 2024</div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="post1">
+    <img src="blog31.jpg" alt="Sony vs Samsung">
+    <div class="post1-content">
+      <div class="post1-category">Brands</div>
+      <a href="blog13.html"><div class="post1-title">OnePlus</div></a>
+      <div class="post1-info">
+        <img src="bloguser1.jpg" alt="Author">
+        <div>
+          <div>Jane</div>
+          <div>Nov 7, 2024</div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="post1">
+      <img src="blog32.jpg" alt="Sony vs Samsung">
+      <div class="post1-content">
+        <div class="post1-category">Brands</div>
+        <a href="blog14.html"><div class="post1-title">Motorola</div></a>
+        <div class="post1-info">
+          <img src="bloguser2.jpg" alt="Author">
+          <div>
+            <div>Kay</div>
+            <div>Nov 7, 2024</div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="post1">
+        <img src="blog33.jpg" alt="Sony vs Samsung">
+        <div class="post1-content">
+          <div class="post1-category">Brands</div>
+          <a href="blog15.html"><div class="post1-title">Thomson</div></a>
+          <div class="post1-info">
+            <img src="bloguser3.jpg" alt="Author">
+            <div>
+              <div>Lynda</div>
+              <div>Nov 7, 2024</div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="post1">
+          <img src="blog34.jpg" alt="Sony vs Samsung">
+          <div class="post1-content">
+            <div class="post1-category">Brands</div>
+            <a href="blog16.html"><div class="post1-title">Realme</div></a>
+            <div class="post1-info">
+              <img src="bloguser4.jpg" alt="Author">
+              <div>
+                <div>Neel</div>
+                <div>Nov 7, 2024</div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="post1">
+            <img src="blog35.jpg" alt="Sony vs Samsung">
+            <div class="post1-content">
+              <div class="post1-category">Brands</div>
+              <a href="blog17.html"><div class="post1-title">Toshiba</div></a>
+              <div class="post1-info">
+                <img src="bloguser5.jpg" alt="Author">
+                <div>
+                  <div>Sianna</div>
+                  <div>Nov 7, 2024</div>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+<div class="post1">
+<img src="blog36.jpg" alt="LG vs Hisense">
+<div class="post1-content">
+  <div class="post1-category">Brands</div>
+  <a href="blog18.html"><div class="post1-title">TCL</div></a>
+  <div class="post1-info">
+    <img src="bloguser6.jpg" alt="Author">
+    <div>
+      <div>Emma Brown</div>
+      <div>Nov 7, 2024</div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div id="news" class="post1-grid" style="display: none;">
+<!-- News Category Content -->
+<div class="post1">
+<img src="blog38.jpg" alt="Latest TV Technologies">
+<div class="post1-content">
+  <div class="post1-category">News</div>
+  <a href="blog19.html"><div class="post1-title">Samsung's Latest 8K TV Unveiled</div></a>
+  <div class="post1-info">
+    <img src="bloguser7.jpg" alt="Author">
+    <div>
+      <div>Emily Wang</div>
+      <div>Nov 7, 2024</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="post1">
+  <img src="blog39.jpg" alt="Latest TV Technologies">
+  <div class="post1-content">
+    <div class="post1-category">News</div>
+    <a href="blog20.html"><div class="post1-title">LG's OLED Smart Tv Advances in 2024</div></a>
+    <div class="post1-info">
+      <img src="bloguser8.jpg" alt="Author">
+      <div>
+        <div>Arun</div>
+        <div>Nov 7, 2024</div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="post1">
+    <img src="blog40.jpg"Latest TV Technologies">
+    <div class="post1-content">
+      <div class="post1-category">News</div>
+      <a href="blog21.html"><div class="post1-title">Sony Bravia Lineup Enhancements</div></a>
+      <div class="post1-info">
+        <img src="bloguser9.jpg" alt="Author">
+        <div>
+          <div>Lendon</div>
+          <div>Nov 7, 2024</div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="post1">
+      <img src="blog41.jpg" alt="Latest TV Technologies">
+      <div class="post1-content">
+        <div class="post1-category">News</div>
+        <a href="blog22.html"><div class="post1-title">OnePlus Expands TV Offerings in 2024</div></a>
+        <div class="post1-info">
+          <img src="bloguser10.jpg" alt="Author">
+          <div>
+            <div>Lee</div>
+            <div>Nov 7, 2024</div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="post1">
+        <img src="blog42.jpg" alt="Latest TV Technologies">
+        <div class="post1-content">
+          <div class="post1-category">News</div>
+          <a href="blog23.html"><div class="post1-title">Motorola Launches New Smart TV Lineup</div></a>
+          <div class="post1-info">
+            <img src="bloguser11.jpg" alt="Author">
+            <div>
+              <div>Paul</div>
+              <div>Nov 7, 2024</div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="post1">
+          <img src="blog43.jpg" alt="Latest TV Technologies">
+          <div class="post1-content">
+            <div class="post1-category">News</div>
+            <a href="blog24.html"><div class="post1-title">Thomson's 2024 Budget-Friendly TV Range</div></a>
+            <div class="post1-info">
+              <img src="bloguser12.jpg" alt="Author">
+              <div>
+                <div>Gren</div>
+                <div>Nov 7, 2024</div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="post1">
+            <img src="blog44.jpg" alt="Latest TV Technologies">
+            <div class="post1-content">
+              <div class="post1-category">News</div>
+              <a href="blog25.html"><div class="post1-title">Realme Announces Smart TV Upgrades</div></a>
+              <div class="post1-info">
+                <img src="bloguser1.jpg" alt="Author">
+                <div>
+                  <div>Neymar</div>
+                  <div>Nov 7, 2024</div>
+                </div>
+              </div>
+            </div>
+            </div>
+<div class="post1">
+<img src="blog45.jpg" alt="Upcoming Releases">
+<div class="post1-content">
+  <div class="post1-category">News</div>
+  <a href="blog26.html"><div class="post1-title">Toshiba’s New OLED Models in 2024</div></a>
+  <div class="post1-info">
+    <img src="bloguser2.jpg" alt="Author">
+    <div>
+      <div>Henry</div>
+      <div>Nov 7, 2024</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="post1">
+<img src="blog37.jpg" alt="Market Trends">
+<div class="post1-content">
+  <div class="post1-category">News</div>
+  <a href="blog27.html"><div class="post1-title">TCL Unveils QLED Google TV in New Models</div></a>
+  <div class="post1-info">
+    <img src="" alt="Author">
+    <div>
+      <div>Leo</div>
+      <div>Nov 7, 2024</div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">TeleVue</span>
+          </a>
+          <p>Discover the latest TVs with stunning picture quality, smart features, and unbeatable sound. Find the perfect model to enhance your viewing experience today!</p>
+
+          <div class="social-links d-flex mt-4">
+            <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/login.php/"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/your-channel-id" target="_blank"><i class="bi bi-youtube"></i></a>
+
+
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="destination.html">DestinationPage</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Information</h4>
+          <ul>
+              <li><a href="term.html">Terms & Conditions</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="return.html">Return Policy</a></li>
+              <li><a href="shipping.html">Shipping Information</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+          </ul>
+      </div>
+      
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>White Field No-3</p>
+          <p>Bangalore,535022</p>
+          <p>INDIA</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 9876543210</span></p>
+          <p><strong>Email:</strong> <span>info@televue.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function showCategory(category) {
+      document.querySelectorAll('.post1-grid').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(category).style.display = 'grid';
+      document.querySelectorAll('.tabs button').forEach(button => {
+        button.classList.remove('active');
+      });
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+
+</html>

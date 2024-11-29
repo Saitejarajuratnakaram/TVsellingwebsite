@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TeleVue</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Append
+  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<style>
+  .container-televue {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.heading-televue {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+}
+
+.heading-televue span {
+    color:orangered;
+}
+
+.flex-televue-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-televue-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-televue-section {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.text-televue-section p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.text-televue-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.about-televue-section {
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+
+.brand-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 20px;
+}
+.highlighted-text {
+    color:orangered;
+}
+.brand-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.brand-item {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+.brand-item:hover {
+    transform: scale(1.1);
+}
+.brand-item img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.telenue-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.telenue-box {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.telenue-box i {
+    font-size: 50px;
+    color: orangered;
+    
+}
+
+.telenue-box h3 {
+    color: black;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.telenue-box p {
+    font-size: 16px;
+    color: #1b1717;
+}
+
+.telenue-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.telenue-title span {
+    color:orangered;
+}
+
+
+
+.text-blk {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  line-height: 25px;
+}
+
+.responsive-cell-block {
+  min-height: 75px;
+}
+
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.outer-container {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+.inner-container {
+  max-width: 1320px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+}
+
+.heading-text {
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 15px;
+  margin-left: px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.sub-heading-text {
+  line-height: 30px;
+  color: orangered;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: -67px;
+  margin-left: 32px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 105px;
+}
+
+.position {
+  line-height: 24px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 35px;
+}
+
+.card {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  padding-right: 11px;
+  padding-bottom: 10px;
+  padding-left: 42px;
+  gap: 10px;
+}
+
+.card-img {
+  width: 100%;
+  height: 250px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  max-width: 300px;
+}
+
+.card-container {
+  display: inline-block;
+  margin-top: 90px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  margin-left: 0px;
+}
+
+.headings-container {
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.team-members-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+@media (max-width: 1024px) {
+  .name {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+  }
+
+  .position {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+  }
+
+  .card-img {
+    width: 100%;
+    min-width: 100%;
+    height: 250px;
+    min-height: 230px;
+    max-height: 230px;
+  }
+}
+
+@media (max-width: 768px) {
+  .position {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .name {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .heading-text {
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+  }
+
+  .sub-heading-text {
+    text-align: center;
+    color: rgb(122, 122, 122);
+    max-width: 500px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+  }
+
+  .team-members-container {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 30px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .card {
+    display: flex;
+  }
+
+  .card-img {
+    max-width: 300px;
+    min-width: 250px;
+  }
+
+  .headings-container {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .card {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .heading-text {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .inner-container {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .heading-text {
+    text-align: left;
+    line-height: 65px;
+  }
+
+  .sub-heading-text {
+    color: rgb(122, 122, 122);
+    text-align: left;
+  }
+
+  .name {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+  }
+
+  .position {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+  }
+
+  .inner-container {
+    margin-top: 80px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .outer-container {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .card-img {
+    width: 100%;
+  }
+
+  .heading-text {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .card-img {
+    min-width: auto;
+  }
+}
+
+
+.card-container:hover .card {
+    transform: scale(1.1);
+  }
+  .card {
+    transition: transform 0.3s ease;
+  }
+
+  .hero {
+    width: 100%;
+    min-height: 50vh;
+    position: relative;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">TeleVue</h1><span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu" style="margin-right: 9px;">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination.html" >DestinationPage</a></li>
+          <li><a href="about.html" class="active">AboutUs</a></li>
+          <li><a href="contact.html">ContactUs</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">Faq</a></li>
+          <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+          <li><a href="dashboard.html"><i class="fa fa-user"></i></a></li> 
+           
+      </ul>
+      
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+
+    </div>
+  </header>
+
+  <main class="main" style="position: relative; overflow: hidden;">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="tv-bannersss.jpg" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <h2 data-aos="fade-up" data-aos-delay="100" style="margin-left: 410px;">"AboutUs"
+            </h2>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+</main>
+
+<div class="container-televue">
+  <h1 class="heading-televue">
+      Discover More
+      <span>About TeleVue</span>
+  </h1>
+  <div class="flex-televue-content">
+      <img 
+          alt="Image of various televisions on display" 
+          height="400" 
+          src="tv.avif" 
+          width="600"
+      />
+      <div class="text-televue-section">
+          <!-- <p>
+              TeleVue is your premier destination for buying and selling used televisions. Whether you want to upgrade your home theater or simply find a great deal on a high-quality used TV, TeleVue guarantees the best prices and top-notch service.
+          </p> -->
+          <h1> Vision</h1>
+          <p>
+              We offer hassle-free transactions at your doorstep. Customer satisfaction is at the core of what we do, and we’re committed to making the process as smooth as possible. After receiving a quote, you can schedule a convenient pickup time and choose your preferred payment method.
+          </p>
+          <p>
+              Our professional team ensures a seamless experience, so you get maximum value and convenience when buying or selling with us.
+          </p>
+          <h1>Mission</h1>
+          <p>
+              To become India’s top choice for television recycling and resale, offering excellent value for used TVs while promoting sustainable practices by preventing electronics from ending up in landfills.
+          </p>
+          <p>We’re passionate about providing great deals on quality used televisions.</p>
+          <p>Our goal is to serve our customers with integrity, value, and reliability.</p>
+      </div>
+  </div>
+  <div class="about-televue-section">
+    <h2>Who We Are?</h2>
+    <p>
+      TeleVue is guided by a commitment to customer satisfaction, sustainable practices, innovative service, and long-term growth. We focus on delivering value to our customers rather than just competing with others in the industry.
+      Founded over two decades ago, TeleVue began with a mission to revolutionize home entertainment. As pioneers in high-definition technology, we have been at the forefront of delivering cutting-edge television experiences. Our products are designed with both quality and environmental sustainability in mind, ensuring that our customers enjoy the best of both worlds. Over the years, TeleVue has grown into a trusted name, with a focus on providing reliable and innovative solutions for every home. Our dedication to quality and our customers continues to drive us forward.
+    </p>
+  </div>
+  
+</div>
+
+
+
+
+
+<h1 class="telenue-title" style="text-align: center;">How <span>Televue</span> Works?</h1>
+<div class="telenue-container">
+    <div class="telenue-box" style="transition: background-color 0.3s ease; cursor: pointer;" onmouseover="this.style.backgroundColor='#FFDBBB'" onmouseout="this.style.backgroundColor='transparent'">
+        <i style="align-items: center;" class="fas fa-shopping-bag"></i>
+        <h3>Check Price</h3>
+        <p>Choose the brand & provide your current television conditions in just a few steps and our <strong>Smart System</strong> will suggest the perfect and best price for your old and used television.</p>
+    </div>
+    <div class="telenue-box" style="transition: background-color 0.3s ease; cursor: pointer;" onmouseover="this.style.backgroundColor='#FFDBBB'" onmouseout="this.style.backgroundColor='transparent'">
+        <i class="fas fa-box"></i>
+        <h3>Schedule Pickup</h3>
+        <p>Just let us know your convenient place (home or work) and the right time slot you want us to pick up your old television. Our executive will visit your place at the right time.</p>
+    </div>
+    <div class="telenue-box" style="transition: background-color 0.3s ease; cursor: pointer;" onmouseover="this.style.backgroundColor='#FFDBBB'" onmouseout="this.style.backgroundColor='transparent'">
+        <i class="fas fa-wallet"></i>
+        <h3>Get Paid</h3>
+        <p>We pay you instantly when our executive picks up the television from your place. We promise an instant payment.</p>
+    </div>
+</div>
+
+
+
+<div class="brand-container">
+    <p class="text-blk heading-text" style="text-align: center;">
+        Our Top Buying Brands
+      </p>
+  </h1>
+  <div class="brand-collection">
+   <div class="brand-item">
+    <img alt="Apple logo" height="100" src="apple.png" width="100"/>
+   </div>
+   <div class="brand-item">
+    <img alt="Samsung logo" height="100" src="samsung.svg" width="100"/>
+   </div>
+   <div class="brand-item">
+    <img alt="OnePlus logo" height="100" src="oneplus.png" width="100"/>
+   </div>
+   <div class="brand-item">
+    <img alt="Vivo logo" height="100" src="vivo.png" width="100"/>
+   </div>
+   <div class="brand-item">
+    <img alt="MI logo" height="100" src="mi.webp" width="100"/>
+   </div>
+   <div class="brand-item">
+    <img alt="Oppo logo" height="100" src="oppoo.png" width="100"/>
+   </div>
+   <div class="brand-item">
+    <img alt="Google logo" height="100" src="goog.png" width="100"/>
+   </div>
+   <div class="brand-item">
+    <img alt="Realme logo" height="100" src="real.png" width="100"/>
+   </div>
+   <div class="brand-item">
+    <img alt="Motorola logo" height="100" src="moto.png" width="100"/>
+   </div>
+   <div class="brand-item">
+    <img alt="iQOO logo" height="100" src="q.webp" width="100"/>
+   </div>
+   <div class="brand-item">
+    <img alt="Nothing logo" height="100" src="noth.png" width="100"/>
+   </div>
+   <div class="brand-item">
+    <img alt="Poco logo" height="100" src="poco.jpg" width="100"/>
+   </div>
+   <div class="brand-item">
+    <img alt="Honor logo" height="100" src="hon.png" width="100"/>
+   </div>
+   <div class="brand-item">
+    <img alt="Asus logo" height="100" src="as.png" width="100"/>
+   </div>
+  
+  </div>
+ </div>
+
+
+
+
+ <div class="responsive-container-block outer-container">
+    <div class="responsive-container-block inner-container">
+      <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-4 wk-ipadp-4 headings-container">
+        <p class="text-blk heading-text" style="text-align: center;">
+          Meet our dream team
+        </p>
+        <p class="text-blk sub-heading-text">
+            Our TeleVue team is composed of dedicated professionals driven by a passion for innovation and customer satisfaction. With expertise spanning technology, design, and customer service, we collaborate to deliver unparalleled television experiences. Together, we are committed to pushing the boundaries of home entertainment and ensuring exceptional value for our customers.
+        </p>
+        
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="responsive-cell-block wk-desk-8 wk-ipadp-8 wk-tab-12 wk-mobile-12 team-members-container">
+        <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-mobile-12 wk-tab-12 card-container">
+          <div class="card" style="transition: transform 0.3s ease;">
+            <img class="card-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft12.svg">
+            <p class="text-blk name">
+              Harry
+            </p>
+            <p class="text-blk position" style="margin-left: 109px;">
+              CEO
+            </p>
+          </div>
+        </div>
+        <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-mobile-12 wk-tab-12 card-container">
+          <div class="card" style="transition: transform 0.3s ease;">
+            <img class="card-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft13.svg">
+            <p class="text-blk name">
+              Andrew
+            </p>
+            <p class="text-blk position" style="text-align: center;">
+              Head of Sales
+            </p>
+          </div>
+        </div>
+        <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-mobile-12 wk-tab-12 card-container">
+          <div class="card" style="transition: transform 0.3s ease;">
+            <img class="card-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft14.svg">
+            <p class="text-blk name">
+              Krish
+            </p>
+            <p class="text-blk position" style="text-align: center;">
+              Marketing Manager
+            </p>
+          </div>
+        </div>
+        <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-mobile-12 wk-tab-12 card-container">
+          <div class="card" style="transition: transform 0.3s ease;">
+            <img class="card-img"  style="border-radius: 10px; height: 230px; margin-top: 9px;" src="testimonials-5.jpg">
+            <p class="text-blk name">
+              Ram
+            </p>
+            <p class="text-blk position" style="margin-left: 45px;">
+               Development Lead
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">TeleVue</span>
+          </a>
+          <p>Discover the latest TVs with stunning picture quality, smart features, and unbeatable sound. Find the perfect model to enhance your viewing experience today!</p>
+
+          <div class="social-links d-flex mt-4">
+            <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/login.php/"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/your-channel-id" target="_blank"><i class="bi bi-youtube"></i></a>
+
+
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="destination.html">DestinationPage</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Information</h4>
+          <ul>
+              <li><a href="term.html">Terms & Conditions</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="return.html">Return Policy</a></li>
+              <li><a href="shipping.html">Shipping Information</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+          </ul>
+      </div>
+      
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>White Field No-3</p>
+          <p>Bangalore,535022</p>
+          <p>INDIA</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 9876543210</span></p>
+          <p><strong>Email:</strong> <span>info@telenue.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
