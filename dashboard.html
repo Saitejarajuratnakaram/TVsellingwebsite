@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeleVue Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f7fc;
+            color: #333;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: #e84545;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .sidebar {
+            flex: 1;
+            max-width: 250px;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .sidebar h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background: #e84545;
+            color: #fff;
+        }
+
+        .content {
+            flex: 3;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .card button {
+            background: #e84545;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 18px;
+        }
+
+        .card button:hover {
+            background: #f07979;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 16px;
+            font-weight: 500;
+            color: #777;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            transition: border 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #e84545;
+            outline: none;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-image: url('profileicon.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .profile-image.editable {
+            cursor: pointer;
+        }
+
+        .profile-image input {
+            display: none;
+        }
+
+        .profile-btn {
+            margin-top: 20px;
+            background: #e84545;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .profile-btn:hover {
+            background: #f07979;
+        }
+
+        .profile-form input {
+            display: none;
+        }
+
+        .edit-profile input {
+            display: block;
+        }
+
+        .chart-container {
+            margin-top: 40px;
+        }
+
+        .chart-container canvas {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            height: 400px;
+        }
+
+        /* notification */
+
+        .card {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .notification-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .notification-date {
+            font-size: 14px;
+            color: #888;
+            text-align: right;
+        }
+
+
+        /* exit icon */
+
+        /* Exit icon styling */
+        .exit-icon {
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: space-between; /* Aligns items in the header */
+            align-items: center;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            margin-right: 36px;
+            margin-top: 5px;
+        }
+
+        .exit-icon:hover {
+            color: black;
+            /* Optional: Change color on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>TeleVue Dashboard</h1>
+            <!-- Professional Exit Icon: Right arrow leaving the door -->
+            <i class="exit-icon fas fa-door-open" onclick="redirectToHome()"></i>
+        </div>
+
+
+        <div class="dashboard">
+            <div class="sidebar">
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="#" onclick="showSection('bookings')">Bookings</a></li>
+                    <li><a href="#" onclick="showSection('profile')">Profile</a></li>
+                    <li><a href="#" onclick="showSection('notifications')">Notifications</a></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <!-- Bookings Section -->
+                <div id="bookings" class="section">
+                    <h2>Manage Your Bookings</h2>
+                    <div class="card" id="bookingTV123">
+                        <h3>Booking #TV123</h3>
+                        <p>TeleVue 4K TV</p>
+                        <p><strong>Delivery Date:</strong> <input type="date" id="dateTV123" value="2024-11-15"></p>
+                        <button onclick="modifyBooking('TV123')">Modify</button>
+                        <button onclick="cancelBooking('TV123')">Cancel</button>
+                    </div>
+                    <div class="card" id="bookingTV456">
+                        <h3>Booking #TV456</h3>
+                        <p>TeleVue Smart TV</p>
+                        <p><strong>Delivery Date:</strong> <input type="date" id="dateTV456" value="2024-11-20"></p>
+                        <button onclick="modifyBooking('TV456')">Modify</button>
+                        <button onclick="cancelBooking('TV456')">Cancel</button>
+                    </div>
+
+                    <!-- No Bookings Left Message -->
+                    <div id="noBookingsMessage"
+                        style="display: none; margin-top: 20px; text-align: center; font-size: 18px;">
+                        <p style="font-size: 18px; font-weight: 500; color: #555;">It seems you have no active bookings
+                            at the moment. <a href="destination.html"
+                                style="color: #1a73e8; text-decoration: none; font-weight: 600;">Browse our
+                                collection</a> and make a new purchase today!</p>
+
+                    </div>
+                </div>
+                <!-- Profile Section -->
+                <div id="profile" class="section" style="display: none;">
+                    <h2>Update Your Profile</h2>
+                    <div class="profile-image" id="profileImage" onclick="uploadImage()"></div>
+                    <div class="form-group">
+                        <label for="profile-name">Full Name</label>
+                        <input type="text" id="profile-name" value="Mark Kalyan" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-email">Email Address</label>
+                        <input type="email" id="profile-email" value="marklion@power.com" disabled>
+                    </div>
+                    <button class="profile-btn" onclick="toggleEditProfile()">Edit Profile</button>
+                    <div class="edit-profile" style="display: none;">
+                        <div class="form-group">
+                            <label for="profile-name-edit">Full Name</label>
+                            <input type="text" id="profile-name-edit" value="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-email-edit">Email Address</label>
+                            <input type="email" id="profile-email-edit" value="johndoe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-pic-edit">Profile Image</label>
+                            <input type="file" id="profile-pic-edit" onchange="previewImage(event)">
+                        </div>
+                        <button class="profile-btn" onclick="updateProfile()">Update</button>
+                    </div>
+                </div>
+
+                <!-- Notifications Section -->
+                <div id="notifications" class="section" style="display: none;">
+                    <h2>Notifications</h2>
+
+                    <!-- Existing notifications -->
+                    <div class="card">
+                        <div class="notification-content">
+                            <div>
+                                <h3>Booking Confirmed</h3>
+                                <p>Your booking for Samsung QLED 72inch Smart TV has been confirmed.</p>
+                            </div>
+                            <div class="notification-date">
+                                <p>September 30, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="notification-content">
+                            <div>
+                                <h3>Promotion</h3>
+                                <p>Get 20% off on your next purchase with the code TVSALE20.</p>
+                            </div>
+                            <div class="notification-date">
+                                <p>November 2, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- New notification added -->
+                    <div class="card">
+                        <div class="notification-content">
+                            <div>
+                                <h3>Shipping Update</h3>
+                                <p>Your order for Samsung QLED Smart TV is on its way! Expect delivery within 2-3
+                                    business days.</p>
+                            </div>
+                            <div class="notification-date">
+                                <p>November 7, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <!-- Chart Section -->
+                <div class="chart-container">
+                    <h2>Sales Report</h2>
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function modifyBooking(bookingId) {
+            const newDate = document.getElementById(`date${bookingId}`).value;
+            const currentDate = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
+
+            // Check if the selected date is in the past
+            if (newDate < currentDate) {
+                alert('You cannot select a past date. Please choose a present or future date.');
+                return; // Exit the function if the date is invalid
+            }
+
+            alert(`Booking ${bookingId} has been modified. New delivery date: ${newDate}`);
+            // You can add actual logic here to update the booking in your database or system
+        }
+
+
+        let canceledBookings = 0;
+        const totalBookings = 2; // Total number of bookings initially
+
+        function cancelBooking(bookingId) {
+            alert(`Booking ${bookingId} has been canceled.`);
+            document.getElementById(`booking${bookingId}`).style.display = 'none';
+            canceledBookings++;
+
+            // Check if all bookings are canceled and show the "Shop Now" message
+            if (canceledBookings === totalBookings) {
+                document.getElementById('noBookingsMessage').style.display = 'block';
+            }
+        }
+
+        function toggleEditProfile() {
+            const profileForm = document.querySelector('.edit-profile');
+            const profileName = document.getElementById('profile-name');
+            const profileEmail = document.getElementById('profile-email');
+            const profileNameEdit = document.getElementById('profile-name-edit');
+            const profileEmailEdit = document.getElementById('profile-email-edit');
+            const profilePicEdit = document.getElementById('profile-pic-edit');
+            const editButton = document.querySelector('.profile-btn');
+
+            if (profileForm.style.display === 'none') {
+                profileForm.style.display = 'block';
+                profileName.disabled = false;
+                profileEmail.disabled = false;
+                editButton.textContent = 'Cancel Editing';
+            } else {
+                profileForm.style.display = 'none';
+                profileName.disabled = true;
+                profileEmail.disabled = true;
+                editButton.textContent = 'Edit Profile';
+            }
+        }
+
+        function updateProfile() {
+            const name = document.getElementById('profile-name-edit').value;
+            const email = document.getElementById('profile-email-edit').value;
+
+            document.getElementById('profile-name').value = name;
+            document.getElementById('profile-email').value = email;
+            document.querySelector('.edit-profile').style.display = 'none';
+
+            alert('Profile Updated');
+        }
+
+        function uploadImage() {
+            document.getElementById('profile-pic-edit').click();
+        }
+
+        function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function () {
+                document.getElementById('profileImage').style.backgroundImage = `url(${reader.result})`;
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        // Chart.js code to create a zig-zag pattern sales chart
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Sales per Month',
+                    data: [18, 33, 27, 9, 21, 30, 27], // This creates a zig-zag pattern
+                    borderColor: 'rgba(26, 115, 232, 1)',
+                    fill: false,
+                    tension: 0.4,
+                }]
+            },
+            options: {
+                responsive: true,
+            }
+        });
+    </script>
+
+    <script>
+        function redirectToHome() {
+            window.location.href = 'index.html'; // Redirect to index.html
+        }
+    </script>
+
+</body>
+
+</html>

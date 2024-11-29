@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>TeleVue</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .body123 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Sticky Navbar */
+        .navbar123 {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 20px;
+            background-color: #fefdfd;
+            width: 100%;
+            gap: 10px;
+            position: sticky;
+            /* Make navbar sticky */
+            top: 90px;
+            /* Stick to the top of the page */
+            z-index: 999;
+            /* Ensure it stays above other content */
+            margin-bottom: 20px;
+        }
+
+        .navbar123 .button12 {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 14px;
+        }
+
+        .navbar123 .button12:hover,
+        .navbar123 .button12.active {
+            background-color: #e84545;
+        }
+
+        .hero {
+            width: 100%;
+            min-height: 50vh;
+            position: relative;
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Card Container */
+        .card-container12 {
+            display: none;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            width: 80%;
+        }
+
+        /* Card Style */
+        .card8 {
+            width: 390px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            padding: 10px;
+            transition: transform 0.3s;
+        }
+
+        .card8 img {
+            width: 380px;
+            height: 250px;
+            object-fit: cover;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        .card8:hover {
+            transform: scale(1.05);
+        }
+
+        .card-title9 {
+            font-size: 19px;
+            font-family: cursive;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename">TeleVue</h1><span>.</span>
+            </a>
+
+            <nav id="navmenu" class="navmenu" style="margin-right: 9px;">
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="destination.html" class="active">DestinationPage</a></li>
+                    <li><a href="about.html">AboutUs</a></li>
+                    <li><a href="contact.html">ContactUs</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                    <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a href="dashboard.html"><i class="fa fa-user"></i></a></li>
+
+                </ul>
+
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background">
+
+            <img src="listbanner.jpg" alt="" data-aos="fade-in">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h2 data-aos="fade-up" data-aos-delay="100" style="margin-left: 300px;font-size: 35px;">"Television is chewing gum for the eyes."</h2>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- /Hero Section -->
+    </main>
+    <!-- main cards content start -->
+    <div class="body123">
+        <!-- Scrollable Navbar with 20 Categories -->
+        <div class="navbar123" id="navbar">
+            <button class="button12" onclick="showCategory('Samsung')">Samsung</button>
+            <button class="button12" onclick="showCategory('LG')">LG</button>
+            <button class="button12" onclick="showCategory('Sony')">Sony</button>
+            <button class="button12" onclick="showCategory('Panasonic')">Panasonic</button>
+            <button class="button12" onclick="showCategory('TCL')">TCL</button>
+            <button class="button12" onclick="showCategory('Philips')">Philips</button>
+            <button class="button12" onclick="showCategory('Hisense')">Hisense</button>
+            <button class="button12" onclick="showCategory('Vizio')">Vizio</button>
+            <button class="button12" onclick="showCategory('Sharp')">Sharp</button>
+            <button class="button12" onclick="showCategory('Xiaomi')">Xiaomi</button>
+            <button class="button12" onclick="showCategory('OnePlus')">OnePlus</button>
+            <button class="button12" onclick="showCategory('Skyworth')">Skyworth</button>
+            <button class="button12" onclick="showCategory('Nokia')">Nokia</button>
+            <button class="button12" onclick="showCategory('Motorola')">Motorola</button>
+            <button class="button12" onclick="showCategory('Sanyo')">Sanyo</button>
+            <button class="button12" onclick="showCategory('Haier')">Haier</button>
+            <button class="button12" onclick="showCategory('Thomson')">Thomson</button>
+            <button class="button12" onclick="showCategory('Blaupunkt')">Blaupunkt</button>
+            <button class="button12" onclick="showCategory('Realme')">Realme</button>
+            <button class="button12" onclick="showCategory('Toshiba')">Toshiba</button>
+        </div>
+
+        <!-- Card Containers for Each Category -->
+
+        <!--   9 Samsung Cards -->
+        <div class="card-container12" id="Samsung">
+            <a href="d1.html"><div class="card8"><img src="d1.jpg" alt="Samsung 1">
+                <div class="card-title9">QLED TV</div>
+            </div></a>
+            <a href="d2.html"><div class="card8"><img src="d2.jpg" alt="Samsung 1">
+                <div class="card-title9">OLED TV</div>
+            </div></a>
+            <a href="d3.html"><div class="card8"><img src="d3.jpg" alt="Samsung 1">
+                <div class="card-title9">Samsung LED TV</div>
+            </div></a>
+            <a href="d4.html"><div class="card8"><img src="d4.jpg" alt="Samsung 1">
+                <div class="card-title9">Samsung 4K UHD Tv</div>
+            </div></a>
+            <a href="d5.html"><div class="card8"><img src="d5.jpg" alt="Samsung 1">
+                <div class="card-title9">Samsung 8K UHD</div>
+            </div></a>
+            <a href="d6.html"><div class="card8"><img src="d6.jpg" alt="Samsung 1">
+                <div class="card-title9">Samsung Smart TV</div>
+            </div></a>
+            <a href="d7.html"><div class="card8"><img src="d7.jpg" alt="Samsung 1">
+                <div class="card-title9">Samsung Crystal UHD</div>
+            </div></a>
+            <a href="d8.html"><div class="card8"><img src="d8.jpg" alt="Samsung 1">
+                <div class="card-title9">Samsung Frame TV</div>
+            </div></a>
+            <a href="d9.html"><div class="card8"><img src="d9.jpg" alt="Samsung 1">
+                <div class="card-title9">Samsung Neo QLED</div>
+            </div></a>
+        </div>
+        <!--   9 LG Cards -->
+        <div class="card-container12" id="LG">
+            <a href="d10.html"><div class="card8"><img src="d10.jpg" alt="LG 1">
+                <div class="card-title9">LG OLED</div>
+            </div></a>
+            <a href="d11.html"><div class="card8"><img src="d11.jpg" alt="LG 1">
+                <div class="card-title9">LG NanoCell</div>
+            </div></a>
+            <a href="d12.html"><div class="card8"><img src="d12.jpg" alt="LG 1">
+                <div class="card-title9">LG QNED Mini LED</div>
+            </div></a>
+            <a href="d13.html"><div class="card8"><img src="d13.jpg" alt="LG 1">
+                <div class="card-title9">LG 4K UHD</div>
+            </div></a>
+            <a href="d14.html"><div class="card8"><img src="d14.jpg" alt="LG 1">
+                <div class="card-title9">LG 8K UHD</div>
+            </div></a>
+            <a href="d15.html"><div class="card8"><img src="d15.jpg" alt="LG 1">
+                <div class="card-title9">LG Smart TV</div>
+            </div></a>
+            <a href="d16.html"><div class="card8"><img src="d16.jpg" alt="LG 1">
+                <div class="card-title9">LG WebOS</div>
+            </div></a>
+            <a href="d17.html"><div class="card8"><img src="d17.jpg" alt="LG 1">
+                <div class="card-title9">LG Ultra HD</div>
+            </div></a>
+            <a href="d18.html"><div class="card8"><img src="d18.jpg" alt="LG 1">
+                <div class="card-title9">LG Dolby Vision</div>
+            </div></a>
+        </div>
+
+        <!--   9 SONY Cards -->
+        <div class="card-container12" id="Sony">
+            <a href="d19.html"><div class="card8"><img src="d19.jpg" alt="LG 1">
+                <div class="card-title9">Sony Bravia</div>
+            </div></a>
+            <a href="d20.html"><div class="card8"><img src="d20.jpg" alt="LG 1">
+                <div class="card-title9">Sony OLED</div>
+            </div></a>
+            <a href="d21.html"><div class="card8"><img src="d21.jpg" alt="LG 1">
+                <div class="card-title9">Sony LED</div>
+            </div></a>
+            <a href="d22.html"><div class="card8"><img src="d22.jpg" alt="LG 1">
+                <div class="card-title9">Sony 4K UHD</div>
+            </div></a>
+            <a href="d23.html"><div class="card8"><img src="d23.jpg" alt="LG 1">
+                <div class="card-title9">Sony 8K UHD</div>
+            </div></a>
+            <a href="d24.html"><div class="card8"><img src="d24.jpg" alt="LG 1">
+                <div class="card-title9">Sony Google TV</div>
+            </div></a>
+            <a href="d25.html"><div class="card8"><img src="d25.jpg" alt="LG 1">
+                <div class="card-title9">Sony X80J</div>
+            </div></a>
+            <a href="d26.html"><div class="card8"><img src="d26.jpg" alt="LG 1">
+                <div class="card-title9">Sony X90J</div>
+            </div></a>
+            <a href="d27.html"><div class="card8"><img src="d27.jpg" alt="LG 1">
+                <div class="card-title9">Sony XR Series</div>
+            </div></a>
+        </div>
+
+        <!--   9 Panasonic Cards -->
+        <div class="card-container12" id="Panasonic">
+            <a href="d28.html"><div class="card8"><img src="d28.jpg" alt="LG 1">
+                <div class="card-title9">Panasonic OLED</div>
+            </div></a>
+            <a href="d29.html"><div class="card8"><img src="d29.jpg" alt="LG 1">
+                <div class="card-title9">Panasonic 4K UHD</div>
+            </div></a>
+            <a href="d30.html"><div class="card8"><img src="d30.jpg" alt="LG 1">
+                <div class="card-title9">Panasonic LED</div>
+            </div></a>
+            <a href="d31.html"><div class="card8"><img src="d31.jpg" alt="LG 1">
+                <div class="card-title9">Panasonic HDR</div>
+            </div></a>
+            <a href="d32.html"><div class="card8"><img src="d32.jpg" alt="LG 1">
+                <div class="card-title9">Panasonic Smart TV</div>
+            </div></a>
+            <a href="d33.html"><div class="card8"><img src="d33.jpg" alt="LG 1">
+                <div class="card-title9">Panasonic Dolby Atmos</div>
+            </div></a>
+            <a href="d34.html"><div class="card8"><img src="d34.jpg" alt="LG 1">
+                <div class="card-title9">Panasonic HCX Processor</div>
+            </div></a>
+            <a href="d35.html"><div class="card8"><img src="d35.jpg" alt="LG 1">
+                <div class="card-title9">Panasonic My Home Screen</div>
+            </div></a>
+            <a href="d36.html"><div class="card8"><img src="d36.jpg" alt="LG 1">
+                <div class="card-title9">Panasonic Dolby Vision</div>
+            </div></a>
+        </div>
+
+        <!--   9 TCL Cards -->
+        <div class="card-container12" id="TCL">
+            <a href="d37.html"><div class="card8"><img src="d37.jpg" alt="LG 1">
+                <div class="card-title9">TCL 4K UHD</div>
+            </div></a>
+            <a href="d38.html"><div class="card8"><img src="d38.jpg" alt="LG 1">
+                <div class="card-title9">TCL 8K UHD</div>
+            </div></a>
+            <a href="d39.html"><div class="card8"><img src="d39.jpg" alt="LG 1">
+                <div class="card-title9">TCL QLED</div>
+            </div></a>
+            <a href="d40.html"><div class="card8"><img src="d40.jpg" alt="LG 1">
+                <div class="card-title9">TCL Mini LED</div>
+            </div></a>
+            <a href="d41.html"><div class="card8"><img src="d41.jpg" alt="LG 1">
+                <div class="card-title9">TCL Smart TV</div>
+            </div></a>
+            <a href="d42.html"><div class="card8"><img src="d42.jpg" alt="LG 1">
+                <div class="card-title9">TCL Roku TV</div>
+            </div></a>
+            <a href="d43.html"><div class="card8"><img src="d43.jpg" alt="LG 1">
+                <div class="card-title9">TCL Android TV</div>
+            </div></a>
+            <a href="d44.html"><div class="card8"><img src="d44.jpg" alt="LG 1">
+                <div class="card-title9">TCL HDR Pro</div>
+            </div></a>
+            <a href="d45.html"><div class="card8"><img src="d45.jpg" alt="LG 1">
+                <div class="card-title9">TCL Dolby Vision</div>
+            </div></a>
+        </div>
+
+        <!--   9 Philips Cards -->
+        <div class="card-container12" id="Philips">
+            <a href="d46.html"><div class="card8"><img src="d46.jpg" alt="LG 1">
+                <div class="card-title9">Philips OLED</div>
+            </div></a>
+            <a href="d47.html"><div class="card8"><img src="d47.jpg" alt="LG 1">
+                <div class="card-title9">Philips Ambilight</div>
+            </div></a>
+            <a href="d48.html"><div class="card8"><img src="d48.jpg" alt="LG 1">
+                <div class="card-title9">Philips 4K UHD</div>
+            </div></a>
+            <a href="d49.html"><div class="card8"><img src="d49.jpg" alt="LG 1">
+                <div class="card-title9">Philips LED</div>
+            </div></a>
+            <a href="d50.html"><div class="card8"><img src="d50.jpg" alt="LG 1">
+                <div class="card-title9">Philips Android TV</div>
+            </div></a>
+            <a href="d51.html"><div class="card8"><img src="d51.jpg" alt="LG 1">
+                <div class="card-title9">Philips Dolby Vision</div>
+            </div></a>
+            <a href="d52.html"><div class="card8"><img src="d52.jpg" alt="LG 1">
+                <div class="card-title9">Philips HDR10+</div>
+            </div></a>
+            <a href="d53.html"><div class="card8"><img src="d53.jpg" alt="LG 1">
+                <div class="card-title9">Philips Smart TV</div>
+            </div></a>
+            <a href="d54.html"><div class="card8"><img src="d54.jpg" alt="LG 1">
+                <div class="card-title9">Philips Ultra HD</div>
+            </div></a>
+        </div>
+
+        <!--   9 Hisense Cards -->
+        <div class="card-container12" id="Hisense">
+            <a href="d55.html"><div class="card8"><img src="d55.jpg" alt="LG 1">
+                <div class="card-title9">Hisense ULED</div>
+            </div></a>
+            <a href="d56.html"><div class="card8"><img src="d56.jpg" alt="LG 1">
+                <div class="card-title9">Hisense 4K UHD</div>
+            </div></a>
+            <a href="d57.html"><div class="card8"><img src="d57.jpg" alt="LG 1">
+                <div class="card-title9">Hisense 8K UHD</div>
+            </div></a>
+            <a href="d58.html"><div class="card8"><img src="d58.jpg" alt="LG 1">
+                <div class="card-title9">Hisense Laser TV</div>
+            </div></a>
+            <a href="d59.html"><div class="card8"><img src="d59.jpg" alt="LG 1">
+                <div class="card-title9">Hisense Quantum Dot</div>
+            </div></a>
+            <a href="d60.html"><div class="card8"><img src="d60.jpg" alt="LG 1">
+                <div class="card-title9">Hisense Smart TV</div>
+            </div></a>
+            <a href="d61.html"><div class="card8"><img src="d61.jpg" alt="LG 1">
+                <div class="card-title9">Hisense Android TV</div>
+            </div></a>
+            <a href="d62.html"><div class="card8"><img src="d62.jpg" alt="LG 1">
+                <div class="card-title9">Hisense HDR10</div>
+            </div></a>
+            <a href="d63.html"><div class="card8"><img src="d63.jpg" alt="LG 1">
+                <div class="card-title9">Hisense Dolby Vision</div>
+            </div></a>
+        </div>
+
+        <!--   9 Vizio Cards -->
+        <div class="card-container12" id="Vizio">
+            <a href="d64.html"><div class="card8"><img src="d64.jpg" alt="LG 1">
+                <div class="card-title9">Vizio OLED</div>
+            </div></a>
+            <a href="d65.html"><div class="card8"><img src="d65.jpg" alt="LG 1">
+                <div class="card-title9">Vizio Quantum</div>
+            </div></a>
+            <a href="d66.html"><div class="card8"><img src="d66.jpg" alt="LG 1">
+                <div class="card-title9">Vizio 4K UHD</div>
+            </div></a>
+            <a href="d67.html"><div class="card8"><img src="d67.jpg" alt="LG 1">
+                <div class="card-title9">Vizio LED</div>
+            </div></a>
+            <a href="d68.html"><div class="card8"><img src="d68.jpg" alt="LG 1">
+                <div class="card-title9">Vizio Smart TV</div>
+            </div></a>
+            <a href="d69.html"><div class="card8"><img src="d69.jpg" alt="LG 1">
+                <div class="card-title9">Vizio Dolby Vision</div>
+            </div></a>
+            <a href="d70.html"><div class="card8"><img src="d70.jpg" alt="LG 1">
+                <div class="card-title9">Vizio HDR10+</div>
+            </div></a>
+            <a href="d71.html"><div class="card8"><img src="d71.jpg" alt="LG 1">
+                <div class="card-title9">Vizio V-Series</div>
+            </div></a>
+            <a href="d72.html"><div class="card8"><img src="d72.jpg" alt="LG 1">
+                <div class="card-title9">Vizio M-Series</div>
+            </div></a>
+        </div>
+
+        <!--   9 Sharp Cards -->
+        <div class="card-container12" id="Sharp">
+            <a href="d73.html"><div class="card8"><img src="d73.jpg" alt="LG 1">
+                <div class="card-title9">Sharp Aquos</div>
+            </div></a>
+            <a href="d74.html"><div class="card8"><img src="d74.jpg" alt="LG 1">
+                <div class="card-title9">Sharp 4K UHD</div>
+            </div></a>
+            <a href="d75.html"><div class="card8"><img src="d75.jpg" alt="LG 1">
+                <div class="card-title9">Sharp LED</div>
+            </div></a>
+            <a href="d76.html"><div class="card8"><img src="d76.jpg" alt="LG 1">
+                <div class="card-title9">Sharp Smart TV</div>
+            </div></a>
+            <a href="d77.html"><div class="card8"><img src="d77.jpg" alt="LG 1">
+                <div class="card-title9">Sharp HDR10</div>
+            </div></a>
+            <a href="d78.html"><div class="card8"><img src="d78.jpg" alt="LG 1">
+                <div class="card-title9">Sharp Android TV</div>
+            </div></a>
+            <a href="d79.html"><div class="card8"><img src="d79.jpg" alt="LG 1">
+                <div class="card-title9">Sharp UHD Upscaler</div>
+            </div></a>
+            <a href="d80.html"><div class="card8"><img src="d80.jpg" alt="LG 1">
+                <div class="card-title9">Sharp Dolby Digital</div>
+            </div></a>
+            <a href="d81.html"><div class="card8"><img src="d81.jpg" alt="LG 1">
+                <div class="card-title9">Sharp Roku TV</div>
+            </div></a>
+        </div>
+
+
+        <!--   9 Xiaomi Cards -->
+        <div class="card-container12" id="Xiaomi">
+            <a href="d82.html"><div class="card8"><img src="d82.jpg" alt="LG 1">
+                <div class="card-title9">Xiaomi Mi LED</div>
+            </div></a>
+            <a href="d83.html"><div class="card8"><img src="d83.jpg" alt="LG 1">
+                <div class="card-title9">Xiaomi QLED</div>
+            </div></a>
+            <a href="d84.html"><div class="card8"><img src="d84.jpg" alt="LG 1">
+                <div class="card-title9">Xiaomi 4K UHD</div>
+            </div></a>
+            <a href="d85.html"><div class="card8"><img src="d85.jpg" alt="LG 1">
+                <div class="card-title9">Xiaomi Smart TV</div>
+            </div></a>
+            <a href="d86.html"><div class="card8"><img src="d86.jpg" alt="LG 1">
+                <div class="card-title9">Xiaomi Android TV</div>
+            </div></a>
+            <a href="d87.html"><div class="card8"><img src="d87.jpg" alt="LG 1">
+                <div class="card-title9">Xiaomi PatchWall</div>
+            </div></a>
+            <a href="d88.html"><div class="card8"><img src="d88.jpg" alt="LG 1">
+                <div class="card-title9">Xiaomi HDR10+</div>
+            </div></a>
+            <a href="d89.html"><div class="card8"><img src="d89.jpg" alt="LG 1">
+                <div class="card-title9">Xiaomi Dolby Audio</div>
+            </div></a>
+            <a href="d90.html"><div class="card8"><img src="d90.jpg" alt="LG 1">
+                <div class="card-title9">Xiaomi Ultra HD</div>
+            </div></a>
+        </div>
+
+
+        <!--   9 OnePlus Cards -->
+        <div class="card-container12" id="OnePlus">
+            <a href="d91.html"><div class="card8"><img src="d91.jpg" alt="LG 1">
+                <div class="card-title9">OnePlus Q1 Series</div>
+            </div></a>
+            <a href="d92.html"><div class="card8"><img src="d92.jpg" alt="LG 1">
+                <div class="card-title9">OnePlus U Series</div>
+            </div></a>
+            <a href="d93.html"><div class="card8"><img src="d93.jpg" alt="LG 1">
+                <div class="card-title9">OnePlus Y Series</div>
+            </div></a>
+            <a href="d94.html"><div class="card8"><img src="d94.jpg" alt="LG 1">
+                <div class="card-title9">OnePlus 4K UHD</div>
+            </div></a>
+            <a href="d95.html"><div class="card8"><img src="d95.jpg" alt="LG 1">
+                <div class="card-title9">OnePlus Smart TV</div>
+            </div></a>
+            <a href="d96.html"><div class="card8"><img src="d96.jpg" alt="LG 1">
+                <div class="card-title9">OnePlus Android TV</div>
+            </div></a>
+            <a href="d97.html"><div class="card8"><img src="d97.jpg" alt="LG 1">
+                <div class="card-title9">OnePlus Gamma Engine</div>
+            </div></a>
+            <a href="d98.html"><div class="card8"><img src="d98.jpg" alt="LG 1">
+                <div class="card-title9">OnePlus Dolby Vision</div>
+            </div></a>
+            <a href="d99.html"><div class="card8"><img src="d99.jpg" alt="LG 1">
+                <div class="card-title9">OnePlus HDR10+</div>
+            </div></a>
+        </div>
+
+
+        <!--   9 Skyworth Cards -->
+        <div class="card-container12" id="Skyworth">
+            <a href="d100.html"><div class="card8"><img src="d100.jpg" alt="LG 1">
+                <div class="card-title9">Skyworth 4K UHD</div>
+            </div></a>
+            <a href="d101.html"><div class="card8"><img src="d101.jpg" alt="LG 1">
+                <div class="card-title9">Skyworth OLED</div>
+            </div></a>
+            <a href="d102.html"><div class="card8"><img src="d102.jpg" alt="LG 1">
+                <div class="card-title9">Skyworth Android TV</div>
+            </div></a>
+            <a href="d103.html"><div class="card8"><img src="d103.jpg" alt="LG 1">
+                <div class="card-title9">Skyworth Smart TV</div>
+            </div></a>
+            <a href="d104.html"><div class="card8"><img src="d104.jpg" alt="LG 1">
+                <div class="card-title9">Skyworth AIoT</div>
+            </div></a>
+            <a href="d105.html"><div class="card8"><img src="d105.jpg" alt="LG 1">
+                <div class="card-title9">Skyworth HDR10</div>
+            </div></a>
+            <a href="d106.html"><div class="card8"><img src="d106.jpg" alt="LG 1">
+                <div class="card-title9">Skyworth Dolby Vision</div>
+            </div></a>
+            <a href="d107.html"><div class="card8"><img src="d107.jpg" alt="LG 1">
+                <div class="card-title9">Skyworth Ultra HD</div>
+            </div></a>
+            <a href="d108.html"><div class="card8"><img src="d108.jpg" alt="LG 1">
+                <div class="card-title9">Skyworth UHD Upscaler</div>
+            </div></a>
+        </div>
+
+
+        <!--   9 Nokia Cards -->
+        <div class="card-container12" id="Nokia">
+            <a href="d109.html"><div class="card8"><img src="d109.jpg" alt="LG 1">
+                <div class="card-title9">Nokia LED</div>
+            </div></a>
+            <a href="d110.html"><div class="card8"><img src="d110.jpg" alt="LG 1">
+                <div class="card-title9">Nokia QLED</div>
+            </div></a>
+            <a href="d111.html"><div class="card8"><img src="d111.jpg" alt="LG 1">
+                <div class="card-title9">Nokia 4K UHD</div>
+            </div></a>
+            <a href="d112.html"><div class="card8"><img src="d112.jpg" alt="LG 1">
+                <div class="card-title9">Nokia Smart TV</div>
+            </div></a>
+            <a href="d113.html"><div class="card8"><img src="d113.jpg" alt="LG 1">
+                <div class="card-title9">Nokia Android TV</div>
+            </div></a>
+            <a href="d114.html"><div class="card8"><img src="d114.jpg" alt="LG 1">
+                <div class="card-title9">Nokia HDR10</div>
+            </div></a>
+            <a href="d115.html"><div class="card8"><img src="d115.jpg" alt="LG 1">
+                <div class="card-title9">Nokia Dolby Vision</div>
+            </div></a>
+            <a href="d116.html"><div class="card8"><img src="d116.jpg" alt="LG 1">
+                <div class="card-title9">Nokia Pure Sound</div>
+            </div></a>
+            <a href="d117.html"><div class="card8"><img src="d117.jpg" alt="LG 1">
+                <div class="card-title9">Nokia Onkyo Speakers</div>
+            </div></a>
+        </div>
+
+
+        <!--   9 Motorola Cards -->
+        <div class="card-container12" id="Motorola">
+            <a href="d118.html"><div class="card8"><img src="d118.jpg" alt="LG 1">
+                <div class="card-title9">Motorola Revou Series</div>
+            </div></a>
+            <a href="d119.html"><div class="card8"><img src="d119.jpg" alt="LG 1">
+                <div class="card-title9">Motorola ZX Series</div>
+            </div></a>
+            <a href="d120.html"><div class="card8"><img src="d120.jpg" alt="LG 1">
+                <div class="card-title9">Motorola 4K UHD</div>
+            </div></a>
+            <a href="d121.html"><div class="card8"><img src="d121.jpg" alt="LG 1">
+                <div class="card-title9">Motorola Smart TV</div>
+            </div></a>
+            <a href="d122.html"><div class="card8"><img src="d122.jpg" alt="LG 1">
+                <div class="card-title9">Motorola Android TV</div>
+            </div></a>
+            <a href="d123.html"><div class="card8"><img src="d123.jpg" alt="LG 1">
+                <div class="card-title9">Motorola Dolby Atmos</div>
+            </div></a>
+            <a href="d124.html"><div class="card8"><img src="d124.jpg" alt="LG 1">
+                <div class="card-title9">Motorola HDR10</div>
+            </div></a>
+            <a href="d125.html"><div class="card8"><img src="d125.jpg" alt="LG 1">
+                <div class="card-title9">Motorola Ultra HD</div>
+            </div></a>
+            <a href="d126.html"><div class="card8"><img src="d126.jpg" alt="LG 1">
+                <div class="card-title9">Motorola Dolby Audio</div>
+            </div></a>
+        </div>
+
+        <!--   9 Sanyo Cards -->
+        <div class="card-container12" id="Sanyo">
+            <a href="d127.html"><div class="card8"><img src="d127.jpg" alt="LG 1">
+                <div class="card-title9">Sanyo Kaizen Series</div>
+            </div></a>
+            <a href="d128.html"><div class="card8"><img src="d128.jpg" alt="LG 1">
+                <div class="card-title9">Sanyo 4K UHD</div>
+            </div></a>
+            <a href="d129.html"><div class="card8"><img src="d129.jpg" alt="LG 1">
+                <div class="card-title9">Sanyo Smart TV</div>
+            </div></a>
+            <a href="d130.html"><div class="card8"><img src="d130.jpg" alt="LG 1">
+                <div class="card-title9">Sanyo LED</div>
+            </div></a>
+            <a href="d131.html"><div class="card8"><img src="d131.jpg" alt="LG 1">
+                <div class="card-title9">Sanyo Android TV</div>
+            </div></a>
+            <a href="d132.html"><div class="card8"><img src="d132.jpg" alt="LG 1">
+                <div class="card-title9">Sanyo HDR10</div>
+            </div></a>
+            <a href="d133.html"><div class="card8"><img src="d133.jpg" alt="LG 1">
+                <div class="card-title9">Sanyo Dolby Audio</div>
+            </div></a>
+            <a href="d134.html"><div class="card8"><img src="d134.jpg" alt="LG 1">
+                <div class="card-title9">Sanyo Bezel-less</div>
+            </div></a>
+            <a href="d135.html"><div class="card8"><img src="d135.jpg" alt="LG 1">
+                <div class="card-title9">Sanyo Ultra HD</div>
+            </div></a>
+        </div>
+
+
+        <!--   9 Haier Cards -->
+        <div class="card-container12" id="Haier">
+            <a href="d136.html"><div class="card8"><img src="d136.jpg" alt="LG 1">
+                <div class="card-title9">Haier 4K UHD</div>
+            </div></a>
+            <a href="d137.html"><div class="card8"><img src="d137.jpg" alt="LG 1">
+                <div class="card-title9">Haier LED</div>
+            </div></a>
+            <a href="d138.html"><div class="card8"><img src="d138.jpg" alt="LG 1">
+                <div class="card-title9">Haier Smart TV</div>
+            </div></a>
+            <a href="d139.html"><div class="card8"><img src="d139.jpg" alt="LG 1">
+                <div class="card-title9">Haier Android TV</div>
+            </div></a>
+            <a href="d140.html"><div class="card8"><img src="d140.jpg" alt="LG 1">
+                <div class="card-title9">Haier HDR10</div>
+            </div></a>
+            <a href="d141.html"><div class="card8"><img src="d141.jpg" alt="LG 1">
+                <div class="card-title9">Haier Bezel-less</div>
+            </div></a>
+            <a href="d142.html"><div class="card8"><img src="d142.jpg" alt="LG 1">
+                <div class="card-title9">Haier Ultra HD</div>
+            </div></a>
+            <a href="d143.html"><div class="card8"><img src="d143.jpg" alt="LG 1">
+                <div class="card-title9">Haier Dolby Digital</div>
+            </div></a>
+            <a href="d144.html"><div class="card8"><img src="d144.jpg" alt="LG 1">
+                <div class="card-title9">Haier UHD Upscaler</div>
+            </div></a>
+        </div>
+
+
+        <!--   9 Thomson Cards -->
+        <div class="card-container12" id="Thomson">
+            <a href="d145.html"><div class="card8"><img src="d145.jpg" alt="LG 1">
+                <div class="card-title9">Thomson 4K UHD</div>
+            </div></a>
+            <a href="d146.html"><div class="card8"><img src="d146.jpg" alt="LG 1">
+                <div class="card-title9">Thomson LED</div>
+            </div></a>
+            <a href="d147.html"><div class="card8"><img src="d147.jpg" alt="LG 1">
+                <div class="card-title9">Thomson Smart TV</div>
+            </div></a>
+            <a href="d148.html"><div class="card8"><img src="d148.jpg" alt="LG 1">
+                <div class="card-title9">Thomson Android TV</div>
+            </div></a>
+            <a href="d149.html"><div class="card8"><img src="d149.jpg" alt="LG 1">
+                <div class="card-title9">Thomson HDR10</div>
+            </div></a>
+            <a href="d150.html"><div class="card8"><img src="d150.jpg" alt="LG 1">
+                <div class="card-title9">Thomson Dolby Digital</div>
+            </div></a>
+            <a href="d151.html"><div class="card8"><img src="d151.jpg" alt="LG 1">
+                <div class="card-title9">Thomson Ultra HD</div>
+            </div></a>
+            <a href="d152.html"><div class="card8"><img src="d152.jpg" alt="LG 1">
+                <div class="card-title9">Thomson Bezel-less</div>
+            </div></a>
+            <a href="d153.html"><div class="card8"><img src="d153.jpg" alt="LG 1">
+                <div class="card-title9">Thomson UHD Upscaler</div>
+            </div></a>
+        </div>
+
+
+        <!--   9 Blaupunkt Cards -->
+        <div class="card-container12" id="Blaupunkt">
+            <a href="d154.html"><div class="card8"><img src="d154.jpg" alt="LG 1">
+                <div class="card-title9">Blaupunkt LED</div>
+            </div></a>
+            <a href="d155.html"><div class="card8"><img src="d155.jpg" alt="LG 1">
+                <div class="card-title9">Blaupunkt 4K UHD</div>
+            </div></a>
+            <a href="d156.html"><div class="card8"><img src="d156.jpg" alt="LG 1">
+                <div class="card-title9">Blaupunkt Smart TV</div>
+            </div></a>
+            <a href="d157.html"><div class="card8"><img src="d157.jpg" alt="LG 1">
+                <div class="card-title9">Blaupunkt Android TV</div>
+            </div></a>
+            <a href="d158.html"><div class="card8"><img src="d158.jpg" alt="LG 1">
+                <div class="card-title9">Blaupunkt HDR10</div>
+            </div></a>
+            <a href="d159.html"><div class="card8"><img src="d159.jpg" alt="LG 1">
+                <div class="card-title9">Blaupunkt Dolby Audio</div>
+            </div></a>
+            <a href="d160.html"><div class="card8"><img src="d160.jpg" alt="LG 1">
+                <div class="card-title9">Blaupunkt Ultra HD</div>
+            </div></a>
+            <a href="d161.html"><div class="card8"><img src="d161.jpg" alt="LG 1">
+                <div class="card-title9">Blaupunkt Bezel-less</div>
+            </div></a>
+            <a href="d162.html"><div class="card8"><img src="d162.jpg" alt="LG 1">
+                <div class="card-title9">Blaupunkt Soundbar Integrated</div>
+            </div></a>
+        </div>
+
+
+        <!--   9 Realme Cards -->
+        <div class="card-container12" id="Realme">
+            <a href="d163.html"><div class="card8"><img src="d163.jpg" alt="LG 1">
+                <div class="card-title9">Realme SLED</div>
+            </div></a>
+            <a href="d164.html"><div class="card8"><img src="d164.jpg" alt="LG 1">
+                <div class="card-title9">Realme 4K UHD</div>
+            </div></a>
+            <a href="d165.html"><div class="card8"><img src="d165.jpg" alt="LG 1">
+                <div class="card-title9">Realme Smart TV</div>
+            </div></a>
+            <a href="d166.html"><div class="card8"><img src="d166.jpg" alt="LG 1">
+                <div class="card-title9">Realme Android TV</div>
+            </div></a>
+            <a href="d167.html"><div class="card8"><img src="d167.jpg" alt="LG 1">
+                <div class="card-title9">Realme HDR10</div>
+            </div></a>
+            <a href="d168.html"><div class="card8"><img src="d168.jpg" alt="LG 1">
+                <div class="card-title9">Realme Dolby Audio</div>
+            </div></a>
+            <a href="d169.html"><div class="card8"><img src="d169.jpg" alt="LG 1">
+                <div class="card-title9">Realme Ultra HD</div>
+            </div></a>
+            <a href="d170.html"><div class="card8"><img src="d170.jpg" alt="LG 1">
+                <div class="card-title9">Realme Chroma Boost</div>
+            </div></a>
+            <a href="d171.html"><div class="card8"><img src="d171.jpg" alt="LG 1">
+                <div class="card-title9">Realme Bezel-less</div>
+            </div></a>
+        </div>
+
+
+        <!--   9 Toshiba Cards -->
+        <div class="card-container12" id="Toshiba">
+            <a href="d172.html"><div class="card8"><img src="d172.jpg" alt="LG 1">
+                <div class="card-title9">Toshiba LED</div>
+            </div></a>
+            <a href="d173.html"><div class="card8"><img src="d173.jpg" alt="LG 1">
+                <div class="card-title9">Toshiba 4K UHD</div>
+            </div></a>
+            <a href="d174.html"><div class="card8"><img src="d174.jpg" alt="LG 1">
+                <div class="card-title9">Toshiba Smart TV</div>
+            </div></a>
+            <a href="d175.html"><div class="card8"><img src="d175.jpg" alt="LG 1">
+                <div class="card-title9">Toshiba Android TV</div>
+            </div></a>
+            <a href="d176.html"><div class="card8"><img src="d176.jpg" alt="LG 1">
+                <div class="card-title9">Toshiba HDR10</div>
+            </div></a>
+            <a href="d177.html"><div class="card8"><img src="d177.jpg" alt="LG 1">
+                <div class="card-title9">Toshiba Dolby Vision</div>
+            </div></a>
+            <a href="d178.html"><div class="card8"><img src="d178.jpg" alt="LG 1">
+                <div class="card-title9">Toshiba Bezel-less</div>
+            </div></a>
+            <a href="d179.html"><div class="card8"><img src="d179.jpg" alt="LG 1">
+                <div class="card-title9">Toshiba Ultra HD</div>
+            </div></a>
+            <a href="d180.html"><div class="card8"><img src="d180.jpg" alt="LG 1">
+                <div class="card-title9">Toshiba OS</div>
+            </div></a>
+        </div>
+        <!-- Repeat similar structure for other categories -->
+
+    </div>
+
+    <br>
+    <br>
+
+    <footer id="footer" class="footer position-relative light-background">
+
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-5 col-md-12 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span class="sitename">TeleVue</span>
+                    </a>
+                    <p>Discover the latest TVs with stunning picture quality, smart features, and unbeatable sound. Find
+                        the
+                        perfect model to enhance your viewing experience today!</p>
+
+                    <div class="social-links d-flex mt-4">
+                        <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.facebook.com/login.php/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/your-channel-id" target="_blank"><i
+                                class="bi bi-youtube"></i></a>
+
+
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="destination.html">DestinationPage</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="term.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="return.html">Return Policy</a></li>
+                        <li><a href="shipping.html">Shipping Information</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    <h4>Contact Us</h4>
+                    <p>White Field No-3</p>
+                    <p>Bangalore,535022</p>
+                    <p>INDIA</p>
+                    <p class="mt-4"><strong>Phone:</strong> <span>+91 9876543210</span></p>
+                    <p><strong>Email:</strong> <span>info@televue.com</span></p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- JavaScript to handle category selection and display respective cards -->
+    <script>
+        function showCategory(category) {
+            // Hide all card containers
+            const cardContainers = document.querySelectorAll('.card-container12');
+            cardContainers.forEach(container => container.style.display = 'none');
+
+            // Remove 'active' class from all buttons
+            document.querySelectorAll('.navbar123 .button12').forEach(button => button.classList.remove('active'));
+
+            // Display the selected category's card container and add 'active' class to the button
+            document.getElementById(category).style.display = 'flex';
+            document.querySelector(`.navbar123 .button12[onclick="showCategory('${category}')"]`).classList.add('active');
+        }
+
+        // Show 'Samsung' category by default on page load
+        showCategory('Samsung');
+    </script>
+
+</body>
+
+</html>
